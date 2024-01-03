@@ -121,7 +121,8 @@ fn search(path:&str)->bool{
 fn define_os(os:&String)->String{
     match os.to_lowercase().as_str(){
         "linux"=>{return "/usr/bin".to_string();},
-        "windows"=>{return String::from("C:\\Programs\\MinGW\\bin\\g++");},
+        "windows"=>{return String::from("C:\\MinGW\\bin\\");},
+        "windows_nt"=>{return String::from("C:\\MinGW\\bin\\");},
         "darwin"=>{return "/usr/bin/g++".to_string();},
         "android"=>{return "/system/bin/g++".to_string();}
         _=>{
